@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon AT-1 - 3D Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="loading-text">Loading 3D Model...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>Canon</span>AT-1
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Canon AT-1</h1>
+                    <h2>Legendary 35mm SLR Camera</h2>
+                    <p>Experience the classic Canon AT-1, a manual focus 35mm single-lens reflex (SLR) camera introduced in 1977. Known for its reliability, precision, and timeless design.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="view-in-3d">
+                            <i class="fas fa-cube"></i> View in 3D
+                        </button>
+                        <button class="btn btn-secondary" id="learn-more">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- 3D Model Container -->
+                    <div id="model-container"></div>
+
+                    <!-- Camera Controls -->
+                    <div class="camera-controls">
+                        <button id="rotate-left"><i class="fas fa-undo"></i></button>
+                        <button id="rotate-right"><i class="fas fa-redo"></i></button>
+                        <button id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                        <button id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                        <button id="reset-camera"><i class="fas fa-sync"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Discover what makes the Canon AT-1 a photographer's favorite</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Manual Control</h3>
+                    <p>Full manual exposure control gives photographers complete creative freedom.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Match Needle Metering</h3>
+                    <p>Center-weighted TTL metering system with match-needle display in viewfinder.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Interchangeable Lenses</h3>
+                    <p>Compatible with the entire range of Canon FD mount lenses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Mechanical Shutter</h3>
+                    <p>Reliable mechanical shutter with speeds from 1/1000 to 1 second plus Bulb.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specs" class="specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Specifications</h2>
+                <p>Technical details of the Canon AT-1</p>
+            </div>
+            <div class="specs-content">
+                <div class="specs-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Canon_AT-1.jpg/1200px-Canon_AT-1.jpg" alt="Canon AT-1 Camera">
+                </div>
+                <div class="specs-details">
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <div class="specs-label">Type</div>
+                            <div class="specs-value">35mm SLR camera</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Release Date</div>
+                            <div class="specs-value">1977</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Lens Mount</div>
+                            <div class="specs-value">Canon FD mount</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Shutter</div>
+                            <div class="specs-value">Horizontal cloth focal plane shutter</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Shutter Speeds</div>
+                            <div class="specs-value">1/1000 to 1 sec + Bulb</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Metering</div>
+                            <div class="specs-value">Center-weighted TTL with match needle</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Film Speed</div>
+                            <div class="specs-value">ASA 25-1600</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Power</div>
+                            <div class="specs-value">1.35v mercury cell (PX625)</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Weight</div>
+                            <div class="specs-value">590g (body only)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Images captured with the Canon AT-1</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Street Photography</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1088&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Landscape</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1206&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Portrait</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Night Sky</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520962880247-cfaf541c8724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Urban</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Film Photography">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Nature</h3>
+                            <p>35mm Film</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>Canon</span>AT-1
+                    <p>A classic 35mm SLR camera</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#specs">Specifications</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Canon AT-1 Showcase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <!-- Fallback for direct file access -->
+    <script>
+        // Check if we're running from file:// protocol
+        if (window.location.protocol === 'file:') {
+            // Create a message to show to the user
+            const modelContainer = document.getElementById('model-container');
+            if (modelContainer) {
+                modelContainer.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; background-color: rgba(0,0,0,0.7); border-radius: 10px;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ef4444; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 10px;">3D Model Cannot Load</h3>
+                        <p style="color: #cbd5e1; margin-bottom: 20px;">Due to browser security restrictions, 3D models cannot be loaded when viewing directly from the file system.</p>
+                        <div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: left;">
+                            <p style="margin-bottom: 10px;"><strong>To view the 3D model:</strong></p>
+                            <ol style="padding-left: 20px; color: #cbd5e1;">
+                                <li>Open Command Prompt as Administrator</li>
+                                <li>Navigate to the project folder:<br><code>cd "D:\\Nagendra project\\3d-camera-showcase"</code></li>
+                                <li>Run a local server:<br><code>python -m http.server 8000</code></li>
+                                <li>Open in browser:<br><code>http://localhost:8000</code></li>
+                            </ol>
+                        </div>
+                        <p style="color: #cbd5e1;">Meanwhile, you can still explore the rest of the website!</p>
+                    </div>
+                `;
+
+                // Hide loading screen
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                }
+            }
+        }
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
